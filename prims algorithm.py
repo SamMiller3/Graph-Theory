@@ -17,7 +17,7 @@ current_row=0
 MST_weight=0
 for row in adjacency_matrix:
         row[0] = 999999
-MST="A" # start at A
+MST="A" # start at A, assumes each node is laballed A, B, C in order in the matrix
 visited_nodes=[0]
 
 for i in range(len(adjacency_matrix)-1):
