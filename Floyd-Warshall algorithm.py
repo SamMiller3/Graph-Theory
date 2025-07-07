@@ -1,4 +1,5 @@
-#Floyd-Warshall algorithm 07/07/25
+#Floyd-Warshall algorithm to find a least distance matrix given an adjacency matrix
+# 07/07/25
 
 import numpy as np
 
