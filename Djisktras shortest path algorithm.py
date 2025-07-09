@@ -25,7 +25,6 @@ distances[start_node]=[0]
 tent_mat[:, start_node] = INF # delete first column so not to revist
 predecessor[start_node] = start_node 
 
-# find initial tentative distance
 
 while len(visited_nodes)!=len(adj_mat):
     min_distance = INF
@@ -36,8 +35,8 @@ while len(visited_nodes)!=len(adj_mat):
             prev_node = node # store predecessor
     visited_nodes.append(next_node)
     distances[next_node] = min_distance
-    tent_mat[:, next_node] = INF # delete next column
-    tent_mat[next_node] += min_distance # update distance
+    tent_mat[:, next_node] = INF # delete next column so not to visit it twice
+    tent_mat[next_node] += min_distance # update tentative distances
     predecessor[next_node] = prev_node
 
 target_node = int(input("what is the target node? "))
