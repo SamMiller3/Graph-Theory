@@ -27,13 +27,6 @@ predecessor[start_node] = start_node
 
 # find initial tentative distance
 
-next_node, min_distance = np.argmin(tent_mat[start_node]) , np.min(tent_mat[start_node])
-visited_nodes.append(next_node)
-distances[next_node] = min_distance
-tent_mat[:, next_node] = INF # delete next column
-tent_mat[next_node] += min_distance # update distance
-predecessor[next_node] = start_node
-
 while len(visited_nodes)!=len(adj_mat):
     min_distance = INF
     for node in visited_nodes:
