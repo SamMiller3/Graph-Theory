@@ -1,4 +1,4 @@
-# Djisktras shortest path algorithm
+# Djisktras shortest path algorithm implemented using dynamic programming on an adjacency matrix
 # 08/07/2025 - 09/07/2025
 import numpy as np
 
@@ -46,7 +46,7 @@ prev_node = target_node
 path = str(prev_node)
 while predecessor[prev_node] != start_node:
     prev_node = predecessor[prev_node]
-    path = str(prev_node) + path
-path = str(start_node) + path
+    path = str(prev_node) + "-" + path
+path = str(start_node) + "-" path
 print(f"shortest path is: {path}")
 print(f"distance is {distances[target_node]}")
