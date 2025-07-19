@@ -1,4 +1,6 @@
-# Djisktras shortest path algorithm implemented using dynamic programming on an adjacency matrix
+# Djisktras shortest path algorithm on an adjacency matrix 
+# implemented using dynamic programming by updating the cumulative distance choosing the local optimal node each
+# iteration (greedy)
 # 08/07/2025 - 09/07/2025
 
 # Djisktras shortest path algorithm
